@@ -6,8 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini quiz</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <div>
+        <h2>MINI QUIZ</h2>
+      </div>
+      <div>
+        <p class="score">Score: 0/3</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="forms-box">
+        <div class="form-box first-form-box">
+          <h4 class="question" id="question1">Question 1</h4>
+          <div class="answers-box">
+            <button
+              class="answer first-answer"
+              id="question1a"
+              data-question="1"
+            >
+              A
+            </button>
+            <button
+              class="answer second-answer"
+              id="question1b"
+              data-question="1"
+            >
+              B
+            </button>
+            <button
+              class="answer third-answer"
+              id="question1c"
+              data-question="1"
+            >
+              C
+            </button>
+          </div>
+        </div>
+        <div class="form-box second-form-box">
+          <h4 class="question" id="question2">Question 2</h4>
+          <div class="answers-box">
+            <button
+              class="answer first-answer"
+              id="question2a"
+              data-question="2"
+            >
+              A
+            </button>
+            <button
+              class="answer second-answer"
+              id="question2b"
+              data-question="2"
+            >
+              B
+            </button>
+            <button
+              class="answer third-answer"
+              id="question2c"
+              data-question="2"
+            >
+              C
+            </button>
+          </div>
+        </div>
+        <div class="form-box third-form-box">
+          <h4 class="question" id="question3">Question 3</h4>
+          <div class="answers-box">
+            <button
+              class="answer first-answer"
+              id="question3a"
+              data-question="3"
+            >
+              A
+            </button>
+            <button
+              class="answer second-answer"
+              id="question3b"
+              data-question="3"
+            >
+              B
+            </button>
+            <button
+              class="answer third-answer"
+              id="question3c"
+              data-question="3"
+            >
+              C
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="edit.html" class="edit-btn">EDIT</a>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

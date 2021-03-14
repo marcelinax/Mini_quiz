@@ -1,0 +1,218 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  background-color: #ffffff;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding-top: 2rem;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  div {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-basis: 100%;
+    }
+    h2 {
+      font-size: 3rem;
+      color: black;
+    }
+    a {
+      width: 20%;
+      display: flex;
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid black;
+      text-decoration: none;
+      background-color: white;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .score {
+      font-size: 1.3rem;
+    }
+  }
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 72px - 2rem);
+
+  .forms-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+  .form-box {
+    display: flex;
+    flex-basis: 33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 3rem;
+    padding: 4rem 2rem;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 black;
+
+    @media screen and (max-width: 768px) {
+      flex-basis: 100%;
+    }
+    .question-input {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      border: 0;
+      border-bottom: 1px solid black;
+      outline: none;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      color: black;
+      margin-bottom: 2rem;
+    }
+    .answers-box {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .answer {
+        position: relative;
+        width: 90%;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        background-color: white;
+        font-size: 1.2rem;
+        transition: 0.3s all;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          background-color: black;
+          color: white;
+          &::after {
+            border-color: white;
+          }
+        }
+        &::after {
+          content: "A";
+          position: absolute;
+          left: 6px;
+          top: 6px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 1px solid black;
+          font-size: 0.7rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        &:nth-child(1) {
+          &::after {
+            content: "A";
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            content: "B";
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            content: "C";
+          }
+        }
+      }
+      .goodAnswer {
+        background-color: #aaf683;
+        border: 1px solid #aaf683;
+        color: white;
+        outline: none;
+        &:hover {
+          background-color: #aaf683;
+        }
+        &::after {
+          border-color: white;
+        }
+      }
+      .badAnswer {
+        background-color: #ef233c;
+        border: 1px solid #ef233c;
+        color: white;
+        outline: none;
+        &:hover {
+          background-color: #ef233c;
+        }
+        &::after {
+          border-color: white;
+        }
+      }
+      .answer-input {
+        border: 0;
+        border-bottom: 1px solid black;
+        width: 90%;
+        margin: 10px;
+        background-color: white;
+        font-size: 1.2rem;
+        outline: none;
+      }
+    }
+  }
+}
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .edit-btn,
+  .save-btn,
+  .back-btn {
+    justify-content: center;
+    min-width: 5%;
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: white;
+    transition: 0.2s all;
+    font-size: 1.1rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+    &:hover {
+      box-shadow: 3px 3px 0 black;
+      transform: translate(-5px, -5px);
+    }
+  }
+
+  .back-btn {
+    margin-left: 1rem;
+  }
+}
