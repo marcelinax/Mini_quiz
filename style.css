@@ -122,6 +122,12 @@ header div h2 {
   color: black;
 }
 
+@media screen and (max-width: 768px) {
+  header div h2 {
+    font-size: 2rem;
+  }
+}
+
 header div a {
   width: 20%;
   display: -webkit-box;
@@ -211,6 +217,7 @@ header div .score {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 2rem 1.5rem;
+    margin: 1rem;
   }
 }
 
@@ -220,6 +227,12 @@ header div .score {
   border: 0;
   border-bottom: 1px solid black;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container .form-box .question-input {
+    width: 100%;
+  }
 }
 
 .container .form-box h4 {

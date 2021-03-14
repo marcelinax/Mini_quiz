@@ -78,6 +78,9 @@ header {
     h2 {
       font-size: 3rem;
       color: black;
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
     a {
       width: 20%;
@@ -128,8 +131,8 @@ header {
 
     @media screen and (max-width: 768px) {
       flex-basis: 100%;
-
       padding: 2rem 1.5rem;
+      margin: 1rem;
     }
     .question-input {
       font-size: 1.3rem;
@@ -137,6 +140,9 @@ header {
       border: 0;
       border-bottom: 1px solid black;
       outline: none;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     h4 {
