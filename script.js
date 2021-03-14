@@ -246,6 +246,7 @@ class Questions {
         const questionIndex = btn.dataset.question;
         if (this[`answered${questionIndex}`] === false) {
           this[`answered${questionIndex}`] = true;
+
           if (this.checkAnswer(e.target.textContent)) {
             btn.classList.add("goodAnswer");
             this.score++;
@@ -253,9 +254,11 @@ class Questions {
             btn.classList.add("badAnswer");
             this.score;
           }
+
           document.querySelector(
             ".score"
           ).textContent = `Score: ${this.score}/3`;
+          this.endGame();
         }
       });
     });
@@ -269,6 +272,36 @@ class Questions {
     )
       return true;
     return false;
+  }
+  endGame() {
+    if (this.answered1 && this.answered2 && this.answered3) {
+      let imgGif = "";
+      switch (this.score) {
+        case 0:
+          imgGif = "./loser.gif";
+          break;
+        case 1:
+          imgGif = "./bad.gif";
+          break;
+        case 2:
+          imgGif = "./thisclose.gif";
+          break;
+        case 3:
+          imgGif = "./winner.gif";
+          break;
+      }
+
+      const endGameDiv = document.createElement("div");
+      endGameDiv.classList.add("end-game-box");
+      let content = `
+      <h2><img src="${imgGif}"/><br/>You completed this quiz with <strong>${this.score}</strong> points!
+      <br><button onclick="location.reload()">New game</button>
+      </h2>
+
+      `;
+      endGameDiv.innerHTML = content;
+      document.body.appendChild(endGameDiv);
+    }
   }
 }
 
